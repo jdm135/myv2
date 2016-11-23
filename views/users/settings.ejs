@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="settings landing">
+    <div class="parent">
+
+        <!-- Top Nav -->
+        <% include ../partials/header %>
+
+        <!-- Full Width Banner -->
+        <div class="main-media">
+            <h1>Account Settings</h1>
+        </div>
+
+        <!-- Container -->
+        <div class="content container">
+            <div class="info-container clearfix">
+                <div class="side-content">
+                    <h3>Account Settings</h3>
+                    <div class="tab-settings">
+                        <a class="active" data-type="basic-settings">Basic Settings</a>
+                        <a data-type="set-password">Set your password</a>
+                        <a data-type="facebook">Facebook</a>
+                        <a data-type="twitter">Twitter</a>
+                        <a data-type="email">Email preferences</a>
+                        <a data-type="status">Account status</a>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="content">
+                        <div class="desc basic-settings active">
+                            <h3>Basic Settings</h3>
+                            <div class="input">
+                                <label>First Name</label>
+                                <input type="text" name="first-name">
+                            </div>
+                            <div class="input">
+                                <label>Last Name</label>
+                                <input type="text" name="last-name">
+                            </div>
+                            <div class="input">
+                                <label>Email</label>
+                                <input type="text" name="email">
+                            </div>
+                            <h4>Password</h4>
+                            <p style="margin-bottom:0;">To change your password, click the 'Set your password' tab to the left.</p>
+                            <a class="save btn">Save Settings</a>
+                        </div>
+                        <div class="desc set-password">
+                            <h3>Set your password</h3>
+                            <div class="input">
+                                <label>Current Password</label>
+                                <input type="text" name="current-pass">
+                            </div>
+                            <div class="input">
+                                <label>New Password</label>
+                                <input type="text" name="new-pass">
+                            </div>
+                            <div class="input">
+                                <label>Confirm Password</label>
+                                <input type="text" name="confirm-pass">
+                            </div>
+                            <a class="save btn">Save Settings</a>
+                        </div>
+                        <div class="desc facebook">
+                            <h3>Facebook</h3>
+                            <p style="margin-bottom:0;">Connecting your Facebook account adds an element of trust for your donors. Also, sharing your campaign on Facebook is one of the best ways to receive donations! MyTV will NEVER post anything to Facebook unless you give
+                                us permission to do so.</p>
+                            <a class="btn"><img src="/images/fb_white.png"> CONNECT</a>
+                        </div>
+                        <div class="desc twitter">
+                            <h3>Twitter</h3>
+                            <p style="margin-bottom:0;">Manage how you use your Twitter account with MyTV.</p>
+                            <a class="btn"><img src="/images/tw_white.png"> CONNECT</a>
+                        </div>
+                        <div class="desc email">
+                            <h3>Email Preferences</h3>
+                            <p>Your email: stek1202@gmail.com</p>
+                            <h4>MyTV Newsletters:</h4>
+                            <div class="radio" style="margin-top:15px;">
+                                <input id="newsOn" type="radio" name="newsletter" checked="">
+                                <label for="newsOn">On</label>
+                                <input id="newsOff" type="radio" name="newsletter" style="margin-left:15px;">
+                                <label for="newsOff">Off</label>
+                            </div>
+                            <a class="save btn">Save Settings</a>
+                        </div>
+                        <div class="desc status">
+                            <h3>Account Status</h3>
+                            <p>Manage your MyTV account status below.</p>
+                            <h4>Account Status:</h4>
+                            <p>Your account is live!</p>
+                            <h4>Join Date:</h4>
+                            <p>September 11, 2016</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <% include ../partials/footer %>
+    </div>
+</body>
+
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $('.tab-settings a').bind('click', function() {
+            var type = $(this).attr('data-type');
+
+            // show active state for tabs
+            $('.tab-settings a').removeClass('active');
+            $(this).addClass('active');
+
+            // show content side
+            $('.main-content .desc').removeClass('active');
+            $('.main-content .desc.' + type).addClass('active');
+        });
+
+        $('.slider .options .option').bind('click', function(){
+          var val = $(this).attr('data-attr');
+          $('.slider .slides').removeClass('active');
+
+          $('.slider .slides.' + val).addClass('active');
+        });
+
+        // logged in user
+        $('.topnav .user').bind('click', function(){
+          $(this).toggleClass('active');
+          $('.topnav .user .dropdown').slideToggle(350);
+        });
+    });
+</script>
+
+</html>

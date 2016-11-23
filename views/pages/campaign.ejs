@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <% include ../partials/head %>
+	</head>
+	<body class="campaign landing">
+		<div class="parent">
+
+			<!-- Top Nav -->
+      <% include ../partials/header %>
+      			<!-- Container -->
+			<div class="content container">
+				<div class="info-container clearfix">
+					<div class="steps-container">
+						<div class="step step-one active">
+							<h2>CREATE YOUR CAMPAIGN</h2>
+							<div class="contain">
+								<span>Campaign Type</span>
+								<div class="toggle-btns clearfix">
+									<div class="option active" data-val="revive">Revive</div>
+									<div class="option" data-val="launch">Launch</div>
+								</div>
+							</div>
+							<div class="contain">
+								<span>GOAL<span>($ or Signatures)</span></span>
+								<input type="text" placeholder="EX. 5000">
+							</div>
+							<div class="contain valid">
+								<span>Show Name</span>
+								<input type="text" placeholder="Friends">
+							</div>
+							<div class="contain error">
+								<span>Campaign Title <span>(40 character limit)</span></span>
+								<input type="text" placeholder="Friends needs to be revived!">
+							</div>
+							<div class="contain">
+								<a class="btn" data-val="two">NEXT</a>
+							</div>
+						</div>
+						<div class="step step-two">
+							<h2>ADD A PHOTO OR VIDEO</h2>
+							<div class="contain clearfix">
+								<span>Add Photo</span>
+								<div class="add-photo"></div>
+							</div>
+							<div class="contain clearfix">
+								<span>Add Video URL</span>
+								<input type="text" placeholder="http://youtube.com/1234">
+							</div>
+							<div class="contain">
+								<a class="btn" data-val="three">NEXT</a>
+								<a class="back" data-val="one">Back</a>
+							</div>
+						</div>
+						<div class="step step-three">
+							<h2>TELL YOUR STORY</h2>
+							<div class="contain">
+								<span>STORY</span>
+								<textarea>wysiwyg</textarea>
+							</div>
+							<div class="contain">
+								<a class="btn" data-val="four">DONE</a>
+								<a class="back" data-val="two">Back</a>
+							</div>
+						</div>
+						<div class="step step-four final">
+							<h2>DONE</h2>
+							<div class="contain">
+								<span>YOU ARE DONE. ADD MESSAGE/ICON OR REDIRECT.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer -->
+      <% include ../partials/footer %>
+		</div>
+	</body>
+
+	<!-- JS -->
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+			$('body.landing .tabs .tab').bind('click', function(){
+				// toggle tabs
+				$('.tabs .tab').removeClass('active');
+				$(this).addClass('active');
+
+				// showing content
+				var val = $(this).attr('data-attr');
+				$('.tab-content .tcontent').removeClass('active');
+				$('.tab-content .tcontent.' + val).addClass('active');
+			});
+
+			// toggle btns on campaign
+			$('.toggle-btns .option').bind('click', function(){
+				$('.toggle-btns .option').removeClass('active');
+				$(this).addClass('active');
+
+				var val = $(this).attr('data-val');
+				if(val == 'launch'){
+					$('.toggle-btns').addClass('launch');
+				}else{
+					$('.toggle-btns').removeClass('launch');
+				}
+			});
+
+			// steps
+			$('.steps-container .step a.btn, .steps-container .step a.back').bind('click', function(){
+				var val = $(this).attr('data-val');
+				$('.steps-container .step').removeClass('active');
+				$('.steps-container .step.step-' + val).addClass('active');
+			})
+		});
+	</script>
+</html>

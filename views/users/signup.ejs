@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="signup campaign landing">
+    <div class="parent">
+
+        <!-- Top Nav -->
+        <% include ../partials/header %>
+
+            <!-- Container -->
+            <div class="content container">
+                <div class="info-container clearfix">
+                    <div class="steps-container">
+                        <div class="step step-one active">
+                            <h2>SIGN UP</h2>
+
+                            <% if (messages) { %>
+                                <p><%= messages %></p>
+                            <% } %>
+
+                              <a href="/users/dashboard" class="fb-link btn"><img src="/images/fb_white.png">USE MY FACEBOOK ACCOUNT</a>
+                              <a href="/users/dashboard" class="tw-link btn"><img src="/images/tw_white.png">USE MY TWITTER ACCOUNT</a>
+                              <p class="or">or</p>
+                              <a class="email-form btn">USE MY EMAIL ADDRESS</a>
+                              <div class="hide" style="display:none;">
+                                  <form action="/users/signup" method="post">
+                                      <div class="contain">
+                                          <span>FIRST NAME</span>
+                                          <input type="text" id="firstName" name="firstName">
+                                      </div>
+                                      <div class="contain">
+                                          <span>LAST NAME</span>
+                                          <input type="text" id="lastName" name="lastName">
+                                      </div>
+                                      <div class="contain">
+                                          <span>EMAIL ADDRESS</span>
+                                          <input type="text" id="email" name="email">
+                                      </div>
+                                      <div class="contain">
+                                          <span>PASSWORD</span>
+                                          <input type="password" id="password" name="password">
+                                      </div>
+                                      <div class="contain">
+                                          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+                                          <button type="submit" class="btn">SIGN UP</button>
+                                      </div>
+                                  </form>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <% include ../partials/footer %>
+    </div>
+</body>
+
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $('.email-form').bind('click', function() {
+            $('.hide').slideToggle(350);
+        });
+    });
+</script>
+
+</html>

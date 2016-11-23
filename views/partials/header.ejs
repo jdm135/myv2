@@ -1,0 +1,60 @@
+<% if(currentUser){ %>
+  <div class="topnav visible">
+      <div class="items container clearfix">
+          <div class="logo-holder">
+              <a class="logo item transition" href="/">
+                  <h2>mytv</h2>
+              </a>
+              <div class="links" style="float:left;">
+                  <a href="/campaigns/revive/new" class="item transition btn-style">revive</a>
+                  <a href="/campaigns/launch/new" class="item transition btn-style">launch</a>
+              </div>
+          </div>
+          <div class="mmenu">menu</div>
+          <div class="links">
+              <a class="item search transition"></a>
+              <a href="/pages/howitworks" class="item transition">How It Works</a>
+              <div class="user">
+                  <img src="http://www.placehold.it/40x40">
+                  <p class="ellipsis"><%= currentUser.firstName %></p>
+                  <div class="dropdown">
+                      <a href="/users/dashboard">My Dashboard</a>
+                      <a href="/users/settings">Account Settings</a>
+                      <a href="/users/logout">Log Out</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+ <% } else{ %>
+   <div class="topnav visible">
+       <div class="items container clearfix">
+           <div class="logo-holder">
+               <a class="logo item transition" href="/">
+                   <h2>mytv</h2>
+               </a>
+               <div class="links" style="float:left;">
+                   <a href="/campaigns/revive/new" class="item transition btn-style">revive</a>
+                   <a href="/campaigns/launch/new" class="item transition btn-style">launch</a>
+               </div>
+           </div>
+           <div class="mmenu">menu</div>
+           <div class="links">
+               <a class="item search transition"></a>
+               <a href="/pages/howitworks" class="item transition">How It Works</a>
+               <a href="/users/signup" class="item signup transition">Sign Up</a>
+               <a href="/users/login" class="item login transition">Log In</a>
+           </div>
+       </div>
+   </div>
+<% } %>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=229371570809682";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>

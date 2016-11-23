@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="revive landing">
+    <div class="parent">
+
+        <!-- Top Nav -->
+        <% include ../partials/header %>
+            <!-- Container -->
+            <div class="content container">
+                <div class="info-container clearfix">
+                    <div class="left">
+                        <div class="banner">
+                            <img src="<%= revive.revivePhoto %>">
+                            <span class="favorite">Favorite</span>
+                        </div>
+                        <h2 class="title"><%= revive.reviveTitle %></h2>
+                        <p class="subtitle">Last season in 2008</p>
+                        <hr class="small">
+                        <div class="social clearfix">
+                            <a class="fb"><img src="/images/fb_white.png"></a>
+                            <a class="tw"><img src="/images/tw_white.png"></a>
+                            <a class="pt hidden"><img src="/images/pt_white.png"></a>
+                            <a class="tm hidden"><img src="/images/tb_white.png"></a>
+                        </div>
+                        <hr class="small">
+                        <div class="tabs clearfix">
+                            <div class="tab active" data-attr="story">
+                                <span>STORY</span>
+                            </div>
+                            <div class="tab" data-attr="updates">
+                                <span>UPDATES</span>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tcontent story active">
+                                <div class="copy">
+                                    <p><%= revive.reviveStory %></p>
+                                    <br>
+                                    <iframe width="660" height="371" src="<%= revive.reviveVideo %>"></iframe>
+                                </div>
+                            </div>
+                            <div class="tcontent updates">
+                                <div class="update">
+                                    <h3>UPDATE #2</h3>
+                                    <p>4 hours ago</p>
+                                    <hr class="small">
+                                    <div class="copy">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                            mollit anim id est laborum.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                            mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                                <div class="update">
+                                    <h3>UPDATE #1</h3>
+                                    <p>12 hours ago</p>
+                                    <hr class="small">
+                                    <div class="copy">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                            mollit anim id est laborum.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                            mollit anim id est laborum.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                                            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                            mollit anim id est laborum.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="small">
+                        <div class="bottom-btns clearfix">
+                            <a class="btn"><img src="/images/question.png">ASK A QUESTION</a>
+                            <a class="btn"><img src="/images/report.png">REPORT REVIVE</a>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="funding">
+                            <h2>13,951 SIGNATURES<span>of <%= revive.reviveGoal %> goal</span></h2>
+                            <div class="funds">
+                                <div class="fund-bar">
+                                    <div class="progress-bar" style="width:80%"></div>
+                                </div>
+                            </div>
+                        </div>
+<<<<<<< HEAD
+                        <a class="popup btn main-btn" href="/campaigns/add_signature">ADD MY SIGNATURE</a>
+=======
+                        <a class="popup btn main-btn" href="/path/to/popup/">ADD MY SIGNATURE</a>
+>>>>>>> f3e0a0d63871b4efa16c84f97e96351001088594
+                        <hr class="small">
+                        <div class="social clearfix">
+                            <a class="fb"><img src="/images/fb_white.png"></a>
+                            <a class="tw"><img src="/images/tw_white.png"></a>
+                            <a class="pt hidden"><img src="/images/pt_white.png"></a>
+                            <a class="tm hidden"><img src="/images/tb_white.png"></a>
+                        </div>
+                        <hr class="small">
+                        <div class="owner user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c93.0.240.240/p240x240/14192740_10103896542065429_7184319250285025710_n.jpg?oh=421b7a20234ef06256b7c1f731676295&oe=58818689">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Jon Smith</p>
+                                <p>Created 2 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right recent">
+                        <h4 class="category">RECENT SUPPORTERS</h4>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/l/t1.0-1/p240x240/13697038_10207835192652421_41828866096877486_n.jpg?oh=536a02d1d3453f82c5a6c312bcbee772&oe=5842CCBB">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Jane Doe</p>
+                                <p>Signed 12 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/p240x240/14292346_109382659519954_9181079190146997888_n.jpg?oh=96f311c1ec430cc60a098f1a02d7632f&oe=587D4071">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Christi Wills Huff</p>
+                                <p>Signed 34 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c25.25.315.315/s240x240/318902_4090011174644_415197009_n.jpg?oh=a38fe7b56404fa4f955c4373bdc22946&oe=588185F2">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Tim Whitfield</p>
+                                <p>Signed 5 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/l/t1.0-1/p240x240/13697038_10207835192652421_41828866096877486_n.jpg?oh=536a02d1d3453f82c5a6c312bcbee772&oe=5842CCBB">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Jane Doe</p>
+                                <p>Signed 12 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/p240x240/14292346_109382659519954_9181079190146997888_n.jpg?oh=96f311c1ec430cc60a098f1a02d7632f&oe=587D4071">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Christi Wills Huff</p>
+                                <p>Signed 34 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c25.25.315.315/s240x240/318902_4090011174644_415197009_n.jpg?oh=a38fe7b56404fa4f955c4373bdc22946&oe=588185F2">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Tim Whitfield</p>
+                                <p>Signed 5 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/l/t1.0-1/p240x240/13697038_10207835192652421_41828866096877486_n.jpg?oh=536a02d1d3453f82c5a6c312bcbee772&oe=5842CCBB">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Jane Doe</p>
+                                <p>Signed 12 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/p240x240/14292346_109382659519954_9181079190146997888_n.jpg?oh=96f311c1ec430cc60a098f1a02d7632f&oe=587D4071">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Christi Wills Huff</p>
+                                <p>Signed 34 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c25.25.315.315/s240x240/318902_4090011174644_415197009_n.jpg?oh=a38fe7b56404fa4f955c4373bdc22946&oe=588185F2">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Tim Whitfield</p>
+                                <p>Signed 5 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/l/t1.0-1/p240x240/13697038_10207835192652421_41828866096877486_n.jpg?oh=536a02d1d3453f82c5a6c312bcbee772&oe=5842CCBB">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Jane Doe</p>
+                                <p>Signed 12 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/p240x240/14292346_109382659519954_9181079190146997888_n.jpg?oh=96f311c1ec430cc60a098f1a02d7632f&oe=587D4071">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Christi Wills Huff</p>
+                                <p>Signed 34 minutes ago</p>
+                            </div>
+                        </div>
+                        <div class="user clearfix">
+                            <div class="avatar">
+                                <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c25.25.315.315/s240x240/318902_4090011174644_415197009_n.jpg?oh=a38fe7b56404fa4f955c4373bdc22946&oe=588185F2">
+                            </div>
+                            <div class="copy">
+                                <p class="ellipsis">Tim Whitfield</p>
+                                <p>Signed 5 hours ago</p>
+                            </div>
+                        </div>
+                        <a class="btn load-more"><img src="/images/load-more.png">LOAD MORE</a>
+                    </div>
+                </div>
+                <hr class="small">
+                <div class="comments">
+                <div class="fb-comments" data-href="http://localhost:3000/" data-width="100%" data-numposts="5"></div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <% include ../partials/footer %>
+    </div>
+</body>
+
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $('body.landing .tabs .tab').bind('click', function() {
+            // toggle tabs
+            $('.tabs .tab').removeClass('active');
+            $(this).addClass('active');
+
+            // showing content
+            var val = $(this).attr('data-attr');
+            $('.tab-content .tcontent').removeClass('active');
+            $('.tab-content .tcontent.' + val).addClass('active');
+        });
+    });
+</script>
+
+</html>

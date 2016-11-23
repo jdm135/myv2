@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="howitworks landing">
+    <div class="parent">
+
+        <!-- Top Nav -->
+        <% include ../partials/header %>
+
+            <!-- Full Width Banner -->
+            <div class="main-media">
+                <h1>HOW IT WORKS</h1>
+            </div>
+
+            <!-- Container -->
+            <div class="content container">
+                <div class="info-container clearfix">
+                    <div class="block-container clearfix">
+                        <div class="block">
+                            <span>1</span>
+                            <h3>CHOOSE REVIVE OR LAUNCH</h3>
+                            <div class="media">
+                                <img src="/images/step1.png">
+                            </div>
+                            <p>Revive any tv show that has been off air and try to get as many signatures as possible by other fans. Launch any tv show to get it on air and try to raise as many funds as possible as well.</p>
+                        </div>
+                        <div class="block">
+                            <span>2</span>
+                            <h3>CREATE A CAMPAIGN</h3>
+                            <div class="media">
+                                <img src="/images/step2.png">
+                            </div>
+                            <p>Simply create a new campaign by clicking the 'Create Campaign' link in ??. Once you land on the campaign page, simply follow the 3 short steps and your campaign will be live in no time.</p>
+                        </div>
+                        <div class="block">
+                            <span>3</span>
+                            <h3>SHARE WITH FRIENDS &amp; FAMILY</h3>
+                            <div class="media">
+                                <img src="/images/step3.png">
+                            </div>
+                            <p>In order for your campaign to gain traction, you must share it with your friends and family. Simply click on any of the social links on your live campaign to share it on facebook, twitter, pinterest, or tumblr.</p>
+                        </div>
+                        <div class="block">
+                            <span>4</span>
+                            <h3>RAISE FUNDS &amp; SIGNATURES</h3>
+                            <div class="media">
+                                <img src="/images/step4.png">
+                            </div>
+                            <p>Once your campaign is live and the word has spread, watch as your friends, family, and fellow tv fans support your campaign by either adding their signature or backing the launch with funds.</p>
+                        </div>
+                    </div>
+                    <p>If you have any more questions, visit our <a href="/faq.php">FAQ</a> page.</p>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <% include ../partials/footer %>
+    </div>
+</body>
+
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $('body.landing .tabs .tab').bind('click', function() {
+            // toggle tabs
+            $('.tabs .tab').removeClass('active');
+            $(this).addClass('active');
+
+            // showing content
+            var val = $(this).attr('data-attr');
+            $('.tab-content .tcontent').removeClass('active');
+            $('.tab-content .tcontent.' + val).addClass('active');
+        });
+
+        // toggle btns on campaign
+        $('.toggle-btns .option').bind('click', function() {
+            $('.toggle-btns .option').removeClass('active');
+            $(this).addClass('active');
+
+            var val = $(this).attr('data-val');
+            if (val == 'launch') {
+                $('.toggle-btns').addClass('launch');
+            } else {
+                $('.toggle-btns').removeClass('launch');
+            }
+        });
+
+        // steps
+        $('.steps-container .step a.btn, .steps-container .step a.back').bind('click', function() {
+            var val = $(this).attr('data-val');
+            $('.steps-container .step').removeClass('active');
+            $('.steps-container .step.step-' + val).addClass('active');
+        })
+    });
+</script>
+
+</html>

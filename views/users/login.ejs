@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="login campaign landing">
+    <div class="parent">
+
+        <!-- Top Nav -->
+        <% include ../partials/header %>
+        <!-- Container -->
+        <div class="content container">
+            <div class="info-container clearfix">
+                <div class="steps-container">
+                    <div class="step step-one active">
+                        <h2>LOG IN</h2>
+
+                        <% if (messages) { %>
+                            <p><%= messages %></p>
+                        <% } %>
+
+                        <a href="/pages/dashboard" class="fb-link btn"><img src="/images/fb_white.png">USE MY FACEBOOK ACCOUNT</a>
+                        <a href="/pages/dashboard" class="tw-link btn"><img src="/images/tw_white.png">USE MY TWITTER ACCOUNT</a>
+                        <p class="or">or</p>
+                        <form action="/users/login" method="post">
+                          <div class="contain">
+                              <span>EMAIL ADDRESS</span>
+                              <input type="text" id="email" name="email">
+                          </div>
+                          <div class="contain">
+                              <span>PASSWORD</span>
+                              <input type="password" id="password" name="password">
+                          </div>
+                          <div class="contain">
+                              <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+                              <button type="submit" class="btn">LOG IN</button>
+                          </div>
+                        </form>
+                        <a class="forgot-pass">Forgot Password?</a>
+                        <a class="register-cta">Don't have an account? Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <% include ../partials/footer %>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="home">
+    <div class="parent">
+
+        <!-- Top Nav -->
+        <% include ../partials/header %>
+        <!-- Banner -->
+        <div class="content banner">
+            <!-- Featured -->
+            <div class="featured clearfix">
+                <div class="single-banner"></div>
+            </div>
+        </div>
+
+        <!-- Container -->
+        <div class="content container pull-up">
+            <div class="featured-tabs no-tabs clearfix">
+                <div class="ftab active">
+                    <div class="above">
+                        <h1>Breaking Bad<span class="year">2008</span></h1>
+                        <p>9.5/10 • TV-MA • 55 min • Action, Drama</p>
+                    </div>
+                    <div class="left">
+                        <h3 class="ellipsis">About the Series</h3>
+                        <p class="owner ellipsis"><strong>Creator:</strong> <a href="#">Vince Gilligan</a> &nbsp;&nbsp; <strong>Stars:</strong> <a href="#">Bryan Cranston</a> & <a href="#">Aaron Paul</a> - <a href="#">See Full Cast</a></p>
+                        <p class="trimmed">A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</p>
+                    </div>
+                    <div class="right">
+                        <div class="funding">
+                            <h2>$133,951 of 250k goal</h2>
+                            <div class="funds">
+                                <div class="fund-bar">
+                                    <div class="progress-bar" style="width:54%"></div>
+                                </div>
+                            </div>
+                            <a class="btn main-btn">BACK THIS SHOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="revive-or-launch clearfix">
+                <div class="left">
+                    <h2>Revive or Launch Any TV Show</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesqueut massa ac porttitor. Donec quis ornare massa, eget tristique tortor. Curabitur ante arcu,</p>
+                    <a href="/users/signup"class="btn main-btn">SIGN UP TODAY</a>
+                </div>
+                <div class="right">
+                    <a href="#" class="play"></a>
+                </div>
+            </div>
+
+            <!-- Popular -->
+            <div class="slider clearfix">
+
+                <!-- Genre List -->
+                <div class="genre-list">
+                    <a href="#">Adventure</a>
+                    <a href="#">Action</a>
+                    <a href="#">Animals</a>
+                    <a href="#">Anime</a>
+                    <a href="#">Art</a>
+                    <a href="#">Biographies</a>
+                    <a href="#">Comedy</a>
+                    <a href="#">Drama</a>
+                    <a href="#">Foreign</a>
+                    <a href="#">Horror</a>
+                    <a href="#">Indie</a>
+                    <a href="#">Musicals</a>
+                    <a href="#">Thrillers</a>
+                    <a href="#">Sci-Fi</a>
+                </div>
+
+                <!-- Feed -->
+                <div class="slide-container">
+                    <div class="options clearfix">
+                        <a class="option active">Popular Now</a>
+                        <a class="option">Most Raised</a>
+                        <a class="option">Newest</a>
+                        <a class="option">Ending Soon</a>
+                    </div>
+                    <div class="clearfix">
+
+                        <% launches.forEach(function(launch) { %>
+
+                        <a href="/campaigns/launch/<%= launch._id %>" class="slide launch">
+                            <div class="media">
+                                <img src="<%= launch.launchPhoto %>">
+                                <div class="funding">
+                                    <h2>$12,151 of <%= launch.launchGoal %> Goal</h2>
+                                    <div class="funds">
+                                        <div class="fund-bar">
+                                            <div class="progress-bar" style="width:82%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="favorite"></span>
+                            <div class="copy">
+                                <p class="secondary">8.7/10 • Animation, Comedy</p>
+                                <h3 class="ellipsis"><h4><%= launch.launchShowName %></h4></h3>
+                            </div>
+                        </a>
+
+                        <% }); %>
+
+                    </div>
+                    <div class="pagination">
+                        <a class="link active">1</a>
+                        <a class="link">2</a>
+                        <a class="link">3</a>
+                        <a class="next">Last</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <% include ../partials/footer %>
+    </div>
+</body>
+
+<script type="text/javascript" charset="utf-8">
+  $(function(){
+    // tabs
+    $('.slider .options .option').bind('click', function(){
+      var val = $(this).attr('data-attr');
+      $('.slider .slides').removeClass('active');
+
+      $('.slider .slides.' + val).addClass('active');
+    });
+
+    // logged in user
+    $('.topnav .user').bind('click', function(){
+      $(this).toggleClass('active');
+      $('.topnav .user .dropdown').slideToggle(350);
+    });
+  });
+</script>
+
+</html>
