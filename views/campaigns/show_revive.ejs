@@ -105,7 +105,7 @@
                                 <img src="https://scontent.xx.fbcdn.net/v/t1.0-1/c93.0.240.240/p240x240/14192740_10103896542065429_7184319250285025710_n.jpg?oh=421b7a20234ef06256b7c1f731676295&oe=58818689">
                             </div>
                             <div class="copy">
-                                <p class="ellipsis">Jon Smith</p>
+                                <p class="ellipsis"><%= currentUser.firstName %> <%= currentUser.lastName %></p>
                                 <p>Created 2 days ago</p>
                             </div>
                         </div>
@@ -247,6 +247,24 @@
             $('.tab-content .tcontent.' + val).addClass('active');
         });
     });
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  $(function(){
+    // tabs
+    $('.slider .options .option').bind('click', function(){
+      var val = $(this).attr('data-attr');
+      $('.slider .slides').removeClass('active');
+
+      $('.slider .slides.' + val).addClass('active');
+    });
+
+    // logged in user
+    $('.topnav .user').bind('click', function(){
+      $(this).toggleClass('active');
+      $('.topnav .user .dropdown').slideToggle(350);
+    });
+  });
 </script>
 
 </html>
