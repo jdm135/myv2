@@ -86,6 +86,20 @@ a{
 	display:none !important;
 }
 
+/* margin helpers */
+.mt-0{
+	margin-top:0 !important;
+}
+.mt-10{
+	margin-top:10px !important;
+}
+.mb-0{
+	margin-bottom:0 !important;
+}
+.mb-10{
+	margin-bottom:10px !important;
+}
+
 /* Top Nav */
 .topnav{
 	position:fixed;

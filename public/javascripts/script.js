@@ -72,6 +72,28 @@ $(function() {
 
     // popup
     $('.popup').magnificPopup({
-      type: 'ajax'
+      type: 'ajax',
+      callbacks: {
+        open: function(){
+          setTimeout(function(){
+            paymentOptions();
+          }, 500);
+        }
+      }
     });
+
+    function paymentOptions(){
+      $('.select-option a').bind('click', function(){
+        var type = $(this).attr('data-val');
+
+        $('.select-option').hide();
+        $('.options .option').removeClass('active');
+        $('.options .option.' + type).addClass('active');
+      });
+
+      $('.options a.back').bind('click', function(){
+        $('.select-option').show();
+        $('.options .option').removeClass('active');
+      });
+    }
 });

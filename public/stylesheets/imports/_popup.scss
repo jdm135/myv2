@@ -1,3 +1,141 @@
+/* Popup w/ Magnific Styling */
+.popup{
+  background:#fff;
+  max-width:450px;
+  width:100%;
+  padding:20px;
+  border-radius:2px;
+  margin:0 auto;
+  position:relative;
+  h2{
+    font-size:19px;
+    margin:0 0 17px;
+    padding-right:20px;
+    text-transform:uppercase;
+  }
+  .info{
+    background:#eef0f0;
+    padding:6px 10px;
+    margin:10px 0;
+    border-radius:2px;
+    p{
+      margin:0;
+      font-size:12px;
+      text-align:left;
+      strong{
+        font-weight:600;
+        margin-right:6px;
+      }
+    }
+  }
+  .content{
+    min-height:80px;
+    p{
+      font-size:14px;
+      line-height:24px;
+      margin:20px 0;
+    }
+    form{
+      .input{
+        float:left;
+        width:100%;
+        input,
+        textarea,
+        select{
+          width:100%;
+          padding:8px 10px;
+          border-radius:2px;
+          font-size:13px;
+          display:block;
+          outline:none !important;
+          border:1px solid #ddd;
+        }
+        textarea{
+          height:90px;
+          resize:none;
+        }
+        button{
+          &:hover{
+            cursor:pointer;
+            background:rgba(18, 146, 212, 0.99);
+          }
+        }
+        + .input{
+          margin-top:10px;
+        }
+        &.half{
+          width:calc(50% - 5px);
+          + .half{
+            margin-left: 10px;
+          }
+        }
+      }
+      &:after{
+        content:'';
+        clear:both;
+        display:table;
+        height:0;
+        width:100%;
+        visibility:hidden;
+      }
+    }
+  }
+  .select-option{
+    a{
+      float:left;
+      text-align:center;
+      display:inline-block;
+      width:calc(50% - 5px);
+      padding:15%;
+      text-indent:-9999px;
+      border-radius:2px;
+      transition:0.3s all ease-in-out;
+      &.choose-stripe{
+        background:#eef0f0 url(../images/stripe-logo.png) no-repeat center center;
+        background-size:120px auto;
+        &:hover{
+          background:#ddd url(../images/stripe-logo.png) no-repeat center center;
+          background-size:120px auto;
+        }
+      }
+      &.choose-paypal{
+        background:#eef0f0 url(../images/paypal-logo.png) no-repeat center center;
+        background-size:120px auto;
+        &:hover{
+          background:#ddd url(../images/paypal-logo.png) no-repeat center center;
+          background-size:120px auto;
+        }
+      }
+      + a{
+        margin-left:10px;
+      }
+      &:hover{
+        cursor:pointer;
+      }
+    }
+  }
+  .options{
+    .option{
+      display:none;
+      &.active{
+        display:block;
+      }
+      a{
+        &.back{
+          display:block;
+          margin-top:15px;
+          text-align:center;
+          font-size:13px;
+          cursor:pointer;
+          &:hover{
+            text-decoration:underline;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -127,7 +265,7 @@ button::-moz-focus-inner {
   height: 44px;
   line-height: 44px;
   position: absolute;
-  right: 0;
+  right: 4px;
   top: 0;
   text-decoration: none;
   text-align: center;
