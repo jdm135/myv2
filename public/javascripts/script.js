@@ -65,10 +65,16 @@ $(function() {
     // Home page banner height
     function homeBanner() {
         var height = $(window).height() - 250;
-        $('body.home .featured').css('height', height);
+        $('.wrapper.home .featured').css('height', height);
     }
 
     homeBanner();
+    styleSelects();
+
+    // style selects
+    function styleSelects(){
+      $('select').chosen();
+    }
 
     // popup
     $('.popup').magnificPopup({
@@ -77,11 +83,13 @@ $(function() {
         open: function(){
           setTimeout(function(){
             paymentOptions();
-          }, 500);
+            styleSelects();
+          }, 350);
         }
       }
     });
 
+    // select payment functionality
     function paymentOptions(){
       $('.select-option a').bind('click', function(){
         var type = $(this).attr('data-val');
@@ -96,4 +104,76 @@ $(function() {
         $('.options .option').removeClass('active');
       });
     }
+
+    // tabs
+    $('.slider .options .option').bind('click', function(){
+      var val = $(this).attr('data-attr');
+      $('.slider .slides').removeClass('active');
+
+      $('.slider .slides.' + val).addClass('active');
+    });
+
+    // logged in user
+    $('.topnav .user').bind('click', function(){
+      $(this).toggleClass('active');
+      $('.topnav .user .dropdown').slideToggle(350);
+    });
+
+    // other tabs
+    $('.wrapper.landing .tabs .tab').bind('click', function() {
+        // toggle tabs
+        $('.tabs .tab').removeClass('active');
+        $(this).addClass('active');
+
+        // showing content
+        var val = $(this).attr('data-attr');
+        $('.tab-content .tcontent').removeClass('active');
+        $('.tab-content .tcontent.' + val).addClass('active');
+    });
+
+    // signup email form
+    $('.email-form').bind('click', function() {
+        $('.hide').slideToggle(350);
+    });
+
+    // toggle btns on campaign
+    $('.toggle-btns .option').bind('click', function() {
+        $('.toggle-btns .option').removeClass('active');
+        $(this).addClass('active');
+
+        var val = $(this).attr('data-val');
+        if (val == 'launch') {
+            $('.toggle-btns').addClass('launch');
+        } else {
+            $('.toggle-btns').removeClass('launch');
+        }
+    });
+
+    //tab settings logic
+    $('.tab-settings a').bind('click', function() {
+        var type = $(this).attr('data-type');
+
+        // show active state for tabs
+        $('.tab-settings a').removeClass('active');
+        $(this).addClass('active');
+
+        // show content side
+        $('.main-content .desc').removeClass('active');
+        $('.main-content .desc.' + type).addClass('active');
+    });
+
+    // slider options
+    $('.slider .options .option').bind('click', function(){
+      var val = $(this).attr('data-attr');
+      $('.slider .slides').removeClass('active');
+
+      $('.slider .slides.' + val).addClass('active');
+    });
+
+    // steps
+    $('.steps-container .step a.btn, .steps-container .step a.back').bind('click', function() {
+        var val = $(this).attr('data-val');
+        $('.steps-container .step').removeClass('active');
+        $('.steps-container .step.step-' + val).addClass('active');
+    });
 });

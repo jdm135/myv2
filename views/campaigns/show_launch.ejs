@@ -5,7 +5,8 @@
     <% include ../partials/head %>
 </head>
 
-<body class="launch landing">
+<body>
+  <div class="wrapper launch landing">
     <div class="parent">
 
         <!-- Top Nav -->
@@ -229,21 +230,6 @@
             <!-- Footer -->
             <% include ../partials/footer %>
     </div>
+  </div>
 </body>
-
-<script type="text/javascript" charset="utf-8">
-    $(function() {
-        $('body.landing .tabs .tab').bind('click', function() {
-            // toggle tabs
-            $('.tabs .tab').removeClass('active');
-            $(this).addClass('active');
-
-            // showing content
-            var val = $(this).attr('data-attr');
-            $('.tab-content .tcontent').removeClass('active');
-            $('.tab-content .tcontent.' + val).addClass('active');
-        });
-    });
-</script>
-
 </html>
