@@ -53,6 +53,15 @@ router.get('/add_signature', function(req, res, next) {
   res.render('campaigns/add_signature');
 });
 
+router.get('/ask_question', function(req, res, next) {
+  res.render('campaigns/ask_question');
+});
+
+router.get('/report_campaign', function(req, res, next) {
+  res.render('campaigns/report_campaign');
+});
+
+
 
 // REVIVE SHOW PAGE
 
@@ -122,6 +131,10 @@ router.post('/launch', isLoggedIn, function(req, res, next) {
 
 router.get('/launch/new', isLoggedIn, function(req, res, next) {
   res.render('campaigns/new_launch');
+});
+
+router.get('/fund_campaign', function(req, res, next) {
+  res.render('campaigns/fund_campaign');
 });
 
 // LAUNCH SHOW PAGE

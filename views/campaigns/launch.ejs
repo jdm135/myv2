@@ -5,7 +5,8 @@
     <% include ../partials/head %>
 </head>
 
-<body class="home">
+<body>
+  <div class="wrapper">
     <div class="parent">
 
         <!-- Top Nav -->
@@ -124,24 +125,6 @@
         <!-- Footer -->
         <% include ../partials/footer %>
     </div>
+  </div>
 </body>
-
-<script type="text/javascript" charset="utf-8">
-  $(function(){
-    // tabs
-    $('.slider .options .option').bind('click', function(){
-      var val = $(this).attr('data-attr');
-      $('.slider .slides').removeClass('active');
-
-      $('.slider .slides.' + val).addClass('active');
-    });
-
-    // logged in user
-    $('.topnav .user').bind('click', function(){
-      $(this).toggleClass('active');
-      $('.topnav .user .dropdown').slideToggle(350);
-    });
-  });
-</script>
-
 </html>

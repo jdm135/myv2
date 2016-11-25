@@ -5,7 +5,8 @@
     <% include ../partials/head %>
 </head>
 
-<body class="launch landing">
+<body>
+  <div class="wrapper launch landing">
     <div class="parent">
 
         <!-- Top Nav -->
@@ -77,8 +78,8 @@
                         </div>
                         <hr class="small">
                         <div class="bottom-btns clearfix">
-                            <a class="btn"><img src="/images/question.png">ASK A QUESTION</a>
-                            <a class="btn"><img src="/images/report.png">REPORT launch</a>
+                            <a class="btn popup" href="/campaigns/ask_question"><img src="/images/question.png">Ask a question</a>
+                            <a class="btn popup" href="/campaigns/report_campaign"><img src="/images/report.png">Report campaign</a>
                         </div>
                     </div>
                     <div class="right">
@@ -90,7 +91,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn main-btn">ADD MY SIGNATURE</a>
+                        <a class="btn main-btn popup" href="/campaigns/fund_campaign">Fund this campaign</a>
                         <hr class="small">
                         <div class="social clearfix">
                             <a class="fb"><img src="/images/fb_white.png"></a>
@@ -229,21 +230,6 @@
             <!-- Footer -->
             <% include ../partials/footer %>
     </div>
+  </div>
 </body>
-
-<script type="text/javascript" charset="utf-8">
-    $(function() {
-        $('body.landing .tabs .tab').bind('click', function() {
-            // toggle tabs
-            $('.tabs .tab').removeClass('active');
-            $(this).addClass('active');
-
-            // showing content
-            var val = $(this).attr('data-attr');
-            $('.tab-content .tcontent').removeClass('active');
-            $('.tab-content .tcontent.' + val).addClass('active');
-        });
-    });
-</script>
-
 </html>
