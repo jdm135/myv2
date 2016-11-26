@@ -286,6 +286,7 @@ a{
 	right:0;
 	width:90%;
 	border-radius:0 0 2px 2px;
+	box-shadow:0 3px 4px -1px rgba(0, 0, 0, 0.3);
 	background:rgba(255,255,255,0.9);
 }
 .topnav .user .dropdown a{
@@ -1811,17 +1812,27 @@ a.btn:hover{
 .wrapper.dashboard .slide hr.small{
 	margin:10px 0;
 }
-.wrapper.dashboard .slide a.link{
+.wrapper.dashboard .slide a.link,
+.wrapper.dashboard .slide button{
 	font-family:'Montserrat', helvetica, arial;
 	letter-spacing:0.25px;
 	font-size:14px;
 	margin-top:10px;
+	background:none;
+	color:#1292d4;
+	border:none;
+	outline:none;
 }
-.wrapper.dashboard .slide a.link + a.link{
+.wrapper.dashboard .slide form{
+	display:inline-block;
+}
+.wrapper.dashboard .slide a.link + form{
 	margin-left:10px;
 }
-.wrapper.dashboard .slide a.link:hover{
+.wrapper.dashboard .slide a.link:hover,
+.wrapper.dashboard .slide button:hover{
 	text-decoration:underline;
+	cursor:pointer;
 }
 .wrapper.dashboard .content a.btn{
 	background:#1292d4;
