@@ -131,9 +131,16 @@ $(function() {
         $('.tab-content .tcontent.' + val).addClass('active');
     });
 
+    // steps
+    $('.wrapper.steps .steps-container .step a.btn, .wrapper.steps .steps-container .step a.back').bind('click', function() {
+        var val = $(this).attr('data-val');
+        $('.wrapper.steps .steps-container .step').removeClass('active');
+        $('.wrapper.steps .steps-container .step.step-' + val).addClass('active');
+    });
+
     // signup email form
-    $('.email-form').bind('click', function() {
-        $('.hide').slideToggle(350);
+    $('.wrapper.signup .email-form').bind('click', function() {
+        $('.wrapper.signup .step .hide').slideToggle(350);
     });
 
     // toggle btns on campaign
@@ -168,12 +175,5 @@ $(function() {
       $('.slider .slides').removeClass('active');
 
       $('.slider .slides.' + val).addClass('active');
-    });
-
-    // steps
-    $('.steps-container .step a.btn, .steps-container .step a.back').bind('click', function() {
-        var val = $(this).attr('data-val');
-        $('.steps-container .step').removeClass('active');
-        $('.steps-container .step.step-' + val).addClass('active');
     });
 });
