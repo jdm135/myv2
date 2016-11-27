@@ -1288,6 +1288,10 @@ a.btn:hover {
   margin: 120px auto 0;
   border-radius: 2px;
   padding: 20px; }
+  .wrapper.campaign .steps-container.full-width {
+    max-width: 720px; }
+    .wrapper.campaign .steps-container.full-width h2 {
+      text-align: left; }
 
 .wrapper.campaign .steps-container .step {
   display: none; }
@@ -1333,7 +1337,9 @@ a.btn:hover {
 
 .wrapper.campaign .steps-container .step textarea {
   resize: none;
-  height: 300px; }
+  height: 100px; }
+  .wrapper.campaign .steps-container .step textarea.wysiwyg {
+    height: 300px; }
 
 .wrapper.campaign .steps-container .contain .add-photo,
 .wrapper.campaign .steps-container .contain .add-video {
@@ -2897,8 +2903,8 @@ html.touch .chzn-container .chzn-results {
 
 #location_chzn .chzn-results,
 .chzn-results {
-  max-height: 146px;
-  max-height: 165px; }
+  max-height: 165px;
+  max-height: 144px; }
 
 #month_chzn .chzn-results {
   max-height: 132px; }

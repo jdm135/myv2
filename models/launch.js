@@ -6,13 +6,15 @@ var launchSchema = new Schema({
         type: String,
         required: true
     },
-    launchGoal: {
-        type: Number,
-        required: true
-    },
     launchTitle: {
         type: String,
         required: true
+    },
+    launchCategory: {
+        type: String
+    },
+    launchGoal: {
+        type: Number
     },
     launchPhoto: {
         type: String

@@ -49,6 +49,10 @@ router.get('/revive/new', isLoggedIn, function(req, res, next) {
   res.render('campaigns/new_revive');
 });
 
+router.get('/revive/edit', isLoggedIn, function(req, res, next) {
+  res.render('campaigns/edit_revive');
+});
+
 router.get('/add_signature', function(req, res, next) {
   res.render('campaigns/add_signature');
 });
@@ -131,6 +135,10 @@ router.post('/launch', isLoggedIn, function(req, res, next) {
 
 router.get('/launch/new', isLoggedIn, function(req, res, next) {
   res.render('campaigns/new_launch');
+});
+
+router.get('/launch/edit', isLoggedIn, function(req, res, next) {
+  res.render('campaigns/edit_launch');
 });
 
 router.get('/fund_campaign', function(req, res, next) {

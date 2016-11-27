@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <div class="wrapper steps campaign landing">
+  <div class="wrapper campaign landing">
     <div class="parent">
 
         <!-- Top Nav -->
@@ -16,9 +16,14 @@
             <div class="content container">
                 <div class="info-container clearfix">
                     <form action="/campaigns/revive" method="post">
-                        <div class="steps-container">
+                        <div class="steps-container full-width">
                             <div class="step step-one active">
                                 <h2>REVIVE</h2>
+
+                                <!-- <div class="contain clearfix">
+                                    <span>Add Photo</span>
+                                    <div class="add-photo"></div>
+                                </div> -->
                                 <div class="contain valid">
                                     <span>Show Name</span>
                                     <input type="text" id="reviveShowName" name="reviveShowName" placeholder="Friends">
@@ -47,8 +52,39 @@
                                       <option>Sci-Fi</option>
                                     </select>
                                 </div>
+                                <div class="contain clearfix">
+                                    <span>Add Photo URL</span>
+                                    <input type="text" id="revivePhoto" name="revivePhoto" placeholder="add photo url">
+                                </div>
+                                <div class="contain clearfix">
+                                    <span>Add Video URL</span>
+                                    <input type="text" id="reviveVideo" name="reviveVideo" placeholder="add video url">
+                                </div>
                                 <div class="contain">
-                                    <button type="submit" class="btn">DONE</button>
+                                    <span>GOAL<span>(Number of Signatures)</span></span>
+                                    <input type="text" id="reviveGoal" name="reviveGoal" placeholder="EX. 5000">
+                                </div>
+                                <div class="contain valid">
+                                    <span>Campaign duration</span>
+                                    <select class="" name="reviveDuration">
+                                      <option>1 Day</option>
+                                      <option>3 Days</option>
+                                      <option>5 Days</option>
+                                      <option>1 Week</option>
+                                      <option>2 Weeks</option>
+                                      <option>1 Month</option>
+                                    </select>
+                                </div>
+                                <div class="contain">
+                                    <span>Short Description</span>
+                                    <textarea placeholder=""></textarea>
+                                </div>
+                                <div class="contain">
+                                    <span>Full Description</span>
+                                    <textarea class="wysiwyg" id="reviveStory" name="reviveStory" placeholder="">wysiwyg</textarea>
+                                </div>
+                                <div class="contain">
+                                    <a class="btn">DONE</a>
                                 </div>
                             </div>
                         </div>
