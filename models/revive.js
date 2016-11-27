@@ -6,13 +6,15 @@ var reviveSchema = new Schema({
         type: String,
         required: true
     },
-    reviveGoal: {
-        type: Number,
-        required: true
-    },
     reviveTitle: {
         type: String,
         required: true
+    },
+    reviveCategory: {
+        type: String
+    },
+    reviveGoal: {
+        type: Number
     },
     revivePhoto: {
         type: String

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+  <div class="wrapper campaign landing">
+    <div class="parent">
+
+        <!-- Top Nav -->
+        <% include ../partials/header %>
+
+            <!-- Container -->
+            <div class="content container">
+                <div class="info-container clearfix">
+                    <form action="/campaigns/launch" method="post">
+                        <div class="steps-container full-width">
+                            <div class="step step-one active">
+                                <h2>LAUNCH</h2>
+
+                                <!-- <div class="contain clearfix">
+                                    <span>Add Photo</span>
+                                    <div class="add-photo"></div>
+                                </div> -->
+                                <div class="contain valid">
+                                    <span>Show Name</span>
+                                    <input type="text" id="launchShowName" name="launchShowName" placeholder="Friends">
+                                </div>
+                                <div class="contain error">
+                                    <span>Campaign Title <span>(40 character limit)</span></span>
+                                    <input type="text" id="launchTitle" name="launchTitle" placeholder="Friends needs to be launched!">
+                                </div>
+                                <div class="contain error">
+                                    <span>Campaign Category</span>
+                                    <select id="launchCategory" name="launchCategory">
+                                      <option>Adventure</option>
+                                      <option>Action</option>
+                                      <option>Animals</option>
+                                      <option>Anime</option>
+                                      <option>Art</option>
+                                      <option>Biographies</option>
+                                      <option>Cartoon</option>
+                                      <option>Comedy</option>
+                                      <option>Drama</option>
+                                      <option>Foreign</option>
+                                      <option>Horror</option>
+                                      <option>Indie</option>
+                                      <option>Musicals</option>
+                                      <option>Thrillers</option>
+                                      <option>Sci-Fi</option>
+                                    </select>
+                                </div>
+                                <div class="contain clearfix">
+                                    <span>Add Photo URL</span>
+                                    <input type="text" id="launchPhoto" name="launchPhoto" placeholder="add photo url">
+                                </div>
+                                <div class="contain clearfix">
+                                    <span>Add Video URL</span>
+                                    <input type="text" id="launchVideo" name="launchVideo" placeholder="add video url">
+                                </div>
+                                <div class="contain">
+                                    <span>GOAL<span>(Number of Signatures)</span></span>
+                                    <input type="text" id="launchGoal" name="launchGoal" placeholder="EX. 5000">
+                                </div>
+                                <div class="contain valid">
+                                    <span>Campaign duration</span>
+                                    <select class="" name="launchDuration">
+                                      <option>1 Day</option>
+                                      <option>3 Days</option>
+                                      <option>5 Days</option>
+                                      <option>1 Week</option>
+                                      <option>2 Weeks</option>
+                                      <option>1 Month</option>
+                                    </select>
+                                </div>
+                                <div class="contain">
+                                    <span>Short Description</span>
+                                    <textarea placeholder=""></textarea>
+                                </div>
+                                <div class="contain">
+                                    <span>Full Description</span>
+                                    <textarea class="wysiwyg" id="launchStory" name="launchStory" placeholder="">wysiwyg</textarea>
+                                </div>
+                                <div class="contain">
+                                    <span>Rewards</span>
+                                    reward #1
+                                    <a class="">+ Add New Reward</a>
+                                </div>
+                                <div class="contain">
+                                    <a class="btn">DONE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form> <!--end form-->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <% include ../partials/footer %>
+    </div>
+  </div>
+</body>
+</html>

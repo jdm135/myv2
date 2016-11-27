@@ -1300,6 +1300,12 @@ a.btn:hover{
 	margin:120px auto 0;
 	border-radius:2px;
 	padding:20px;
+	&.full-width{
+		max-width:720px;
+		h2{
+			text-align:left;
+		}
+	}
 }
 .wrapper.campaign .steps-container .step{
 	display:none;
@@ -1345,7 +1351,10 @@ a.btn:hover{
 }
 .wrapper.campaign .steps-container .step textarea{
 	resize:none;
-	height:300px;
+	height:100px;
+	&.wysiwyg{
+		height:300px;
+	}
 }
 .wrapper.campaign .steps-container .contain .add-photo,
 .wrapper.campaign .steps-container .contain .add-video{
