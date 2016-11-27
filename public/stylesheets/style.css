@@ -56,6 +56,14 @@ p {
 a {
   color: #1292d4;
   text-decoration: none; }
+  a.link {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 400;
+    display: inline-block; }
+    a.link:hover {
+      cursor: pointer;
+      text-decoration: underline; }
 
 .clearfix:after {
   content: '';
@@ -1434,6 +1442,23 @@ a.btn:hover {
 .wrapper.campaign .steps-container .toggle-btns .option.active {
   color: #fff; }
 
+.wrapper.campaign .steps-container .rewards .reward span {
+  font-size: 11px;
+  margin: 20px 0 10px;
+  float: left; }
+  .wrapper.campaign .steps-container .rewards .reward span.delete-reward {
+    float: right;
+    margin: 0;
+    color: red; }
+    .wrapper.campaign .steps-container .rewards .reward span.delete-reward:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+
+.wrapper.campaign .steps-container .rewards .reward .contain {
+  margin-top: 10px; }
+  .wrapper.campaign .steps-container .rewards .reward .contain input {
+    font-size: 14px; }
+
 /* How it Works */
 .wrapper.howitworks .info-container {
   text-align: center; }
@@ -1767,7 +1792,7 @@ a.btn:hover {
   overflow: hidden; }
 
 .filters .filter {
-  width: 20%;
+  width: 25%;
   float: left;
   color: #5f5f5f;
   background: #eef0f0;
@@ -1812,6 +1837,7 @@ a.btn:hover {
 .wrapper.dashboard .slide form {
   display: inline-block; }
 
+.wrapper.dashboard .slide a.link + a.link,
 .wrapper.dashboard .slide a.link + form {
   margin-left: 10px; }
 

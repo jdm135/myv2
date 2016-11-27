@@ -26,7 +26,6 @@
                         <div class="filter" data-val="following">Following</div>
                         <div class="filter" data-val="revivals">Revivals</div>
                         <div class="filter" data-val="launches">Launches</div>
-                        <div class="filter" data-val="messages">Messages</div>
                     </div>
                     <div class="dashboard-content">
                         <!-- <div class="empty-content text-center">
@@ -52,6 +51,7 @@
                                     </div>
                                     <h3 class="ellipsis"><%= revive.reviveShowName %></h3>
                                     <hr class="small">
+                                    <a href="#" class="link">Add Update</a>
                                     <a href="#" class="link">Edit</a>
                                     <form action="/campaigns/revive/<%= revive._id %>?_method=DELETE" method="post">
                                       <button>Delete</button>
@@ -79,6 +79,7 @@
                                     </div>
                                     <h3 class="ellipsis"><%= launch.launchShowName %></h3>
                                     <hr class="small">
+                                    <a href="#" class="link">Add Update</a>
                                     <a href="#" class="link">Edit</a>
                                     <form action="/campaigns/launch/<%= launch._id %>?_method=DELETE" method="post">
                                       <button>Delete</button>

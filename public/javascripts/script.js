@@ -176,4 +176,32 @@ $(function() {
 
       $('.slider .slides.' + val).addClass('active');
     });
+
+    // add reward
+    $('a.add-reward').bind('click', function(){
+      var count = $('.rewards .reward').last().attr('data-count');
+      count++;
+      $('.rewards').append('<div class="reward" data-count="' + count + '">\
+        <span>Reward #' + count + ' <span class="delete-reward">Delete</span></span>\
+        <div class="contain">\
+          <input type="text" placeholder="Title">\
+        </div>\
+        <div class="contain">\
+          <input type="text" placeholder="Pledge Amount">\
+        </div>\
+        <div class="contain">\
+          <input type="text" placeholder="Estimated Delivery">\
+        </div>\
+      </div>');
+      deleteReward()
+    });
+
+    // delete reward
+    function deleteReward(){
+      $('.rewards .reward span.delete-reward').unbind().bind('click', function(){
+        $(this).parent().parent().remove();
+      });
+    }
+
+    deleteReward();
 });
